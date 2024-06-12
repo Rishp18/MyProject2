@@ -22,4 +22,15 @@ public class JsonDataReader {
 		return data;
 	}
 
+	public List<HashMap<String, String>> name(String filename) throws IOException {
+
+		String jensomnfilecontent = FileUtils.readFileToString(new File(filename) ,StandardCharsets.UTF_8);
+
+		ObjectMapper mapper=new ObjectMapper();
+		List<HashMap<String, String>> data = mapper.readValue(jensomnfilecontent, new TypeReference<List<HashMap<String, String>>>() {
+		});
+
+		return data;
+	}
+
 }

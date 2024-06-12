@@ -36,5 +36,10 @@
     <version>2.17.0</version>
 </dependency>
 
+  	<dependency>
+  		<groupId>helthcare</groupId>
+  		<artifactId>Helthcare_project</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>

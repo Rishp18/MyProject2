@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCase.LoginTestCase">
+      <class name="ScreenshotUtility">
         <methods>
-          <include name="Loginuser" invocation-numbers="0 1"/>
-          <include name="TerDown"/>
-          <include name="InshilizeDriver"/>
+          <include name="Scroll"/>
         </methods>
-      </class> <!-- TestCase.LoginTestCase -->
+      </class> <!-- ScreenshotUtility -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

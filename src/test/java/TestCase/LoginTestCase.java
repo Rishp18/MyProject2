@@ -1,9 +1,13 @@
 package TestCase;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,12 +15,17 @@ import org.testng.annotations.Test;
 import BaseTest.BaseClass;
 import BaseTest.JsonDataReader;
 import Pages.LoginPage;
+import io.reactivex.rxjava3.functions.Action;
 
 public class LoginTestCase extends BaseClass {
 
 
 	@Test(dataProvider = "LoginData")
-	public void Loginuser(HashMap<String, String> input) {
+	public void Loginuser(HashMap<String, String> input) throws AWTException {
+		
+		Actions action=new Actions(driver);
+Robot rb=new Robot();
+rb.keyPress(KeyEvent.VK_CONTROL);
 
 		LoginPage page= new LoginPage(driver);
 		WebElement title = page.LoginUserusing_ValidEmail(input.get("Email"), input.get("Passwoard"));
